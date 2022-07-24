@@ -1,0 +1,5 @@
+@use './bsae/reset';
+@use './abstracts/color' as c;
+*{
+    background: c.$color;
+}
