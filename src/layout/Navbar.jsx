@@ -35,16 +35,18 @@ function navbar() {
           </li>
 
           <li className="item">
-            Blog
+            <Link to ='/Blog'className="link-menu">Blog</Link>
           </li>
 
           <div className="menu-login">
-              <a href="" className="link-menu">Login</a>
+              <Link to ='/login'className="link-menu">Login</Link>
             <p>/</p>
-              <a href="" className="link-menu">Sing-up</a>
+              <Link  to ='/singup' className="link-menu">Sing-up</Link>
           </div>
           
-          <div className="item">cart 0</div>
+          <div className="item">
+          <Link  to ='/cart' className="link-menu">cart 0</Link>
+          </div>
         </ul>
       </div>
     </div>

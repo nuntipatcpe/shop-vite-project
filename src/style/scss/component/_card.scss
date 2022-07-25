@@ -8,11 +8,23 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 1rem;
+        position: relative;
+        &:hover{
+          transform: scale(1.05);
+        }
+        .img{
+          // background: #000;
+          width: 100%;
+          height: 55%;
+          left: 0;
+          top:0;
+          position: absolute;
+        }
+
         img {
-          background-size: contain;
+          background-size: cover;
           background-repeat: no-repeat;
           background-position: center;
-          // background: abs.$color-base-2;
         }
         .topic {
           font-weight: bold;
@@ -32,12 +44,12 @@
             align-items: center;
             gap: 10px;
 
-            .increase{
-              @include abs.btn-increase;
-            }
-            .decrease{
-              @include abs.btn-decrease;
-            }
+            // .increase{
+            //   @include abs.btn-increase;
+            // }
+            // .decrease{
+            //   @include abs.btn-decrease;
+            // }
 
           }
         

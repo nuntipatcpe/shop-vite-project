@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Navbar from './layout/Navbar'
 import Home from './pages/Home'
 import Products from './pages/Products'
+import ProductDetails from './pages/ProductDetails'
 
 import { BrowserRouter as Router, Routes , Route, Link } from "react-router-dom";
 
@@ -19,6 +20,7 @@ function App() {
           <Route path='/Products' element={<Products/>} />
           <Route path='/Products/seed' element={<Products menu={'seed'}/>} />
           <Route path='/Products/tools' element={<Products menu={'tools'}/>} />
+          <Route path='/details' element={<ProductDetails/>} />
           <Route path='/tools' element={<Products/>} />
 
         </Routes>
