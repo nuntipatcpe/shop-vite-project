@@ -12,13 +12,11 @@
     background: abs.$color-base-5;
     width: 100vw;
     left: 0;
-    p {
+    .link {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 5rem;
-      a{
-        color: abs.$color-base-3;
-      }
+       color: abs.$color-base-3;
     }
 }

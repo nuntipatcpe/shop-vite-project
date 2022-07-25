@@ -1,0 +1,30 @@
+@use '../abstracts' as abs;
+
+.product{
+    .container{
+        flex-direction: column;
+    }
+    .title{
+        font-weight: bold;
+        display: flex;
+        // text-align: center;
+        align-items: center;
+        font-size: abs.$font-2;
+        width: 100%;
+        margin-top: 2rem;
+        //  background: gainsboro;
+        height: 3rem;
+    }
+    .serach{
+        width: 80%;
+        height: 40px;
+        margin: 2rem;
+        // padding: 0;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 3rem;
+    }
+    
+}

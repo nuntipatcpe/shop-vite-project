@@ -4,4 +4,8 @@
 @use './layouts/container';
 @use './layouts/navba';
 
-@use './pages/home'
+//pages
+@use './pages/home';
+@use './pages/products';
+
+@use './component/card';

@@ -9,14 +9,14 @@
 
   .background {
    
-    height: auto;
+    height: 60vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     .img {
-      height: 500px;
+      height: 100%;
       width: 100vw;
       background: url(/src/assets/img/bg-1.png);
       background-size: cover;
@@ -32,14 +32,13 @@
         font-weight: bold;
         font-size: abs.$font-6;
         color: abs.$color-base-1;
-        margin-top: 4rem;
+        margin-top: 5rem;
         position: absolute;
         top: 3rem;
       }
       button {
-    
         position: absolute;
-        margin-top: 3rem;
+        margin-top: 15rem;
         box-shadow: 2px 2px 7px 2px #000;
         font-weight: bold;
         font-size: abs.$font-3;
@@ -54,9 +53,9 @@
       }
   }
   .top {
+    // background: #000;
     padding: 2rem 0;
-
-    height: 40vh;
+    max-height: 40vh;
     width: 100%;
     display: flex;
     h1 {
@@ -71,58 +70,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-
-      .card {
-        box-shadow: 1px 1px 10px 1px rgb(163, 163, 163);
-        width: 12rem;
-        height: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 1rem;
-        img {
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-          // background: abs.$color-base-2;
-        }
-        .topic {
-          font-weight: bold;
-          height: 2rem;
-          display: flex;
-          align-items: center;
-        }
-        .pice {
-          display: flex;
-          align-items: center;
-          height: 1.5rem;
-        }
-        .btn {
-          //   background-color: aquamarine;
-          padding: 0 1.5rem;
-          display: flex;
-          justify-content: space-between;
-
-          button {
-            height: 2rem;
-            border: 0px;
-            font-weight: bold;
-            box-shadow: 1px 1px 10px 1px rgb(163, 163, 163);
-          }
-          .add-cart {
-            background: abs.$color-base-2;
-            color: abs.$color-base-1;
-          }
-          .buy {
-            background: abs.$color-base-1;
-            color: abs.$color-base-2;
-          }
-        }
-
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
-      }
     }
   }
 }
