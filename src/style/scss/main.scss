@@ -1,5 +1,7 @@
 @use './bsae/reset';
-@use './abstracts/color' as c;
-*{
-    background: c.$color;
-}
+
+
+@use './layouts/container';
+@use './layouts/navba';
+
+@use './pages/home'

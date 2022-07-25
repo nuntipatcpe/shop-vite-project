@@ -1,0 +1,52 @@
+@use "../abstracts" as abs;
+// @use '../layouts/container' as con;
+.nav-bar {
+  height: 5rem;
+  font-weight: bold;
+  color: abs.$color-base-1;
+  background-color: abs.$color-base-3;
+  // position: fixed;
+  // z-index: 1000;
+  // width: 100%;
+  a {
+    color: abs.$color-base-1;
+  }
+  .container {
+    justify-content: space-between;
+  }
+
+  .logo h1 {
+    margin-left: 1rem;
+    font-size: abs.$font-2;
+  }
+  .menu {
+    margin-right: 1rem;
+    font-size: abs.$font-1;
+    display: flex;
+    z-index: 1000;
+    .item {
+        cursor: pointer;
+      margin-right: 4rem;
+      // position: relative;
+   
+      .bar {
+        @include abs.animateMenuProduct;
+        left: -5rem;
+        opacity: 0;
+        z-index: 2;
+        top: 5rem;
+      }
+      .bar.active {
+        @include abs.animateMenuProduct;
+        left: 0rem;
+        opacity: .9;
+        z-index: -1;
+        top: 5rem;
+      }
+    }
+
+    .menu-login {
+      display: flex;
+    }
+  }
+}

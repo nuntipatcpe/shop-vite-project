@@ -1,0 +1,9 @@
+@use '../abstracts' as abs;
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
