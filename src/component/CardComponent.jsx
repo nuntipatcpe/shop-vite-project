@@ -16,9 +16,9 @@ function CardComponent(props) {
         <div className="pice">
           <p>$500</p>
           <div className="num">
-          <button onClick={()=>{setCount(count-1)}}>-</button>  
+          <button className="increase" onClick={()=>{setCount(count-1)}}>-</button>  
           <p>{count}</p>  
-          <button onClick={()=>{setCount(count+1)}}>+</button>  
+          <button className="decrease" onClick={()=>{setCount(count+1)}}>+</button>  
           </div> 
           </div>
         

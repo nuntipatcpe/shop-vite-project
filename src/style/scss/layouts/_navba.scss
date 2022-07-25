@@ -27,16 +27,23 @@
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    // background: #000;
+    width: 50%;
 
-    .link-product{
+    .link-product {
       display: flex;
       align-items: center;
       height: 100%;
+      transition: 0.2s ease;
+      &:hover {
+        transition: 0.2s ease;
+        transform: scale(1.2);
+      }
     }
-    .item {
-        cursor: pointer;
-      margin-right: 4rem;
+    .products {
+      cursor: pointer;
+      // margin-right: 4rem;
 
       .bar {
         @include abs.animateMenuProduct;
@@ -44,28 +51,49 @@
         top: 5rem;
         height: 4px;
         opacity: 1;
-        .link{
-          display: none
+        .link {
+          display: none;
         }
-
       }
       .bar.active {
         @include abs.animateMenuProduct;
         display: block;
         left: 0rem;
-        opacity: .9;
+        opacity: 0.9;
         top: 5rem;
         width: 100%;
         height: auto;
-        .link{   
-        display: flex;
+        .link {
+          display: flex;
+          &:hover {
+            transition: 0.2s ease;
+            transform: scale(1.1);
+          }
         }
       }
-
+      transition: 0.2s ease;
+    }
+    .item {
+      cursor: pointer;
+      transition: 0.2s ease;
+      &:hover {
+        transition: 0.2s ease;
+        transform: scale(1.2);
+      }
     }
 
     .menu-login {
+      cursor: pointer;
       display: flex;
+      transition: 0.2s ease;
+      // margin-right: 4rem;
+      .link-menu {
+        margin: 0 0.7rem;
+        &:hover {
+          transition: 0.2s ease;
+          transform: scale(1.2);
+        }
+      }
     }
   }
 }

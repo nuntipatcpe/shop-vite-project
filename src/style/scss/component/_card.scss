@@ -31,6 +31,14 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
+
+            .increase{
+              @include abs.btn-increase;
+            }
+            .decrease{
+              @include abs.btn-decrease;
+            }
+
           }
         
         }
@@ -47,12 +55,12 @@
             box-shadow: 1px 1px 10px 1px rgb(163, 163, 163);
           }
           .add-cart {
-            background: abs.$color-base-2;
-            color: abs.$color-base-1;
+            // background: abs.$color-base-2;
+            // color: abs.$color-base-1;
+            @include abs.btn-add;
           }
           .buy {
-            background: abs.$color-base-1;
-            color: abs.$color-base-2;
+            @include abs.btn-buy;
           }
         }
       }

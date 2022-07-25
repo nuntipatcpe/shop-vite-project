@@ -8,7 +8,7 @@
   }
 
   .background {
-   
+
     height: 60vh;
     width: 100%;
     display: flex;
@@ -37,19 +37,7 @@
         top: 3rem;
       }
       button {
-        position: absolute;
-        margin-top: 15rem;
-        box-shadow: 2px 2px 7px 2px #000;
-        font-weight: bold;
-        font-size: abs.$font-3;
-        background: abs.$color-base-1;
-        height: 3.5rem;
-        border: 0px;
-        transition: 0.3s ease;
-        &:hover {
-          transition: 0.3s ease;
-          transform: scale(1.05);
-        }
+        @include abs.btn-home;
       }
   }
   .top {

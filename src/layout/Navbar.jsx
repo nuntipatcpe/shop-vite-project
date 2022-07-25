@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function navbar() {
   const [productHendle, setProductHendle] = useState(false);
-
+  console.log(productHendle);
   return (
     <div className="nav-bar">
       <div className="container">
@@ -23,11 +23,11 @@ function navbar() {
             <h1>Product</h1>
           </Link>
 
-          <li className="item">
+          <li className="products">
             <div
               className={productHendle ? "bar active" : "bar"}
-              onMouseOut={() => setProductHendle(false)}
               onMouseOver={() => setProductHendle(true)}
+              onMouseOut={() => setProductHendle(false)}
             >
               <Link to="/products/seed" className="link">Seed</Link>
               <Link to="/products/tools"  className="link">Planting tools</Link>
@@ -35,18 +35,16 @@ function navbar() {
           </li>
 
           <li className="item">
-            <a href="">Blog</a>
+            Blog
           </li>
+
           <div className="menu-login">
-            <li>
-              <a href="">Log</a>
-            </li>
+              <a href="" className="link-menu">Login</a>
             <p>/</p>
-            <li className="item">
-              <a href="">Sing-up</a>
-            </li>
+              <a href="" className="link-menu">Sing-up</a>
           </div>
-          <div className="cart">cart 0</div>
+          
+          <div className="item">cart 0</div>
         </ul>
       </div>
     </div>
