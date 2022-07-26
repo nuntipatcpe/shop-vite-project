@@ -66,17 +66,23 @@
   }
 }
 
-@mixin btn-increase {
+@mixin btn-increase-decrease {
   cursor: pointer;
   border: 0px;
+  width: 1.5rem;
+  height: 1.5rem;
   box-shadow: 1px 1px 5px 1px rgb(163, 163, 163);
   &:hover {
     transform: scale(1.1);
   }
 }
-@mixin btn-decrease {
+@mixin btn-delete {
   cursor: pointer;
   border: 0px;
+  // width: 1.5rem;
+  height: 1.5rem;
+  color: c.$color-base-1;
+  background-color: c.$color-base-3;
   box-shadow: 1px 1px 5px 1px rgb(163, 163, 163);
   &:hover {
     transform: scale(1.1);

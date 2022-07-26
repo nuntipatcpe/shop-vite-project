@@ -9,7 +9,7 @@ function ProductDetails() {
         <h1 className="title">Product details</h1>
         <div className="detail-con">
           <div className="img">
-            <img src="/src/assets/img/bg-2.png" alt="" />
+            <img src="/src/assets/img/bg-1.png" alt="" />
           </div>
 
           <div className="detail">
@@ -35,6 +35,7 @@ function ProductDetails() {
                 +
               </button>
             </div>
+            
             <div className="btn">
               <button className="add-cart">Add to cart</button>
               <button className="buy">Buy</button>

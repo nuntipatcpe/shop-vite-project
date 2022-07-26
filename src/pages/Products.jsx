@@ -7,7 +7,7 @@ function Products(props) {
   return (
     <div className="product">
       <div className="container">
-        <h1 className="title">Cannabis strains</h1>
+        <h1 className="title">{productProp}</h1>
         <input type="text" className="serach" placeholder="Serach" />
         <div className="grid-container">
           <CardComponent item={productProp} />

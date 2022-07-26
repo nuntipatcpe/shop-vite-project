@@ -1,0 +1,47 @@
+@use '../abstracts' as abs;
+.product-items{
+    display: flex;
+    height: 6rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 1px 1px 5px 1px rgb(163, 163, 163);
+    margin-bottom: 2rem;
+
+    img{
+        width: 150px;
+        height: 100%;
+        object-fit: cover;
+    }
+    .name{
+        font-weight: bold;
+        width: 240px;
+  
+    }
+    .pice{
+        width: 5rem;
+    }
+    .num {
+        display: flex;
+        // width: 50px;
+        height: 100px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        p{
+          // background: #000;
+          text-align: center;
+          width: 30px;
+        }
+        .increase {
+          @include abs.btn-increase-decrease;
+        }
+        .decrease {
+          @include abs.btn-increase-decrease;
+        }
+      }
+      .delete-btn{
+        margin: 0 1rem;
+        @include abs.btn-delete;
+      }
+}

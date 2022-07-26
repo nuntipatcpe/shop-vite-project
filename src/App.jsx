@@ -5,8 +5,9 @@ import Navbar from './layout/Navbar'
 import Home from './pages/Home'
 import Products from './pages/Products'
 import ProductDetails from './pages/ProductDetails'
+import Cart from './pages/Cart'
 
-import { BrowserRouter as Router, Routes , Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes , Route} from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState()
@@ -22,7 +23,7 @@ function App() {
           <Route path='/Products/tools' element={<Products menu={'tools'}/>} />
           <Route path='/details' element={<ProductDetails/>} />
           <Route path='/tools' element={<Products/>} />
-
+          <Route path='/cart' element={<Cart/>} />
         </Routes>
       </Router>
       
