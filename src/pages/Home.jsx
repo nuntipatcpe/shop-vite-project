@@ -1,13 +1,16 @@
 import React from "react";
 
-import img from '../assets/img/bg-2.png'
+
+import {product} from '../assets/dataProducts/index'
+
 
 import CardComponent from "../component/CardComponent";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
+import {  Link } from "react-router-dom";
 
 function Home() {
+  const data = product().map(item=>item).sort((a, b)=>{return b.popular - a.popular });
+
   return (
     <div className="home">
       <div className="container">
@@ -22,16 +25,13 @@ function Home() {
 
           
           <h1>Top3</h1>
-          <div className="card-con">
-          
+          <div className="card-con">    
             <h1>1st</h1>
-           <CardComponent/>
-        
+           <CardComponent top ={data[0] }/>
             <h1>2st</h1>
-            <CardComponent/>
-
+            <CardComponent top = {data[1]}/>
             <h1>3st</h1>
-            <CardComponent/>
+            <CardComponent top = {data[2]}/>
           </div>
 
 

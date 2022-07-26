@@ -1,59 +1,13 @@
 import React from "react";
 import ListProduct from "../component/Cart/ListProduct";
-
+import {useSelector} from 'react-redux'
 function Cart() {
-  const data = [
-    {
-      name: "Cannabis sativa",
-      pice: "$400",
-      num: 1,
-    },
-    {
-      name: "Cannabis sativa",
-      pice: "$100",
-      num: 5,
-    },
-    {
-      name: "Cannabis sativa",
-      pice: "$200",
-      num: 3,
-    },
-    {
-      name: "Cannabis sativa",
-      pice: "$300",
-      num: 1,
-    },
-    {
-      name: "Cannabis sativa",
-      pice: "$300",
-      num: 1,
-    },
-    {
-      name: "Cannabis sativa",
-      pice: "$300",
-      num: 1,
-    },
-    {
-      name: "Cannabis sativa",
-      pice: "$300",
-      num: 1,
-    },
-    {
-      name: "Cannabis sativa",
-      pice: "$300",
-      num: 1,
-    },
-    {
-      name: "Cannabis sativa",
-      pice: "$300",
-      num: 1,
-    },
-    {
-      name: "Cannabis sativa",
-      pice: "$300",
-      num: 1,
-    }
-  ];
+
+    const item = useSelector((state)=> state.cart);
+    // const a = item.map((i)=> i)
+    // console.log(a);
+
+  const data = item;
 
   return (
     <div className="cart">
@@ -63,7 +17,7 @@ function Cart() {
           {/* _______________ */}
           {data.map((item) => {
             return (
-                    <ListProduct data={item}/>
+                <ListProduct data={item}/>
             );
           })}
 

@@ -2,10 +2,16 @@ import React,{useState} from "react";
 
 function ListProduct(props) {
     const data = props.data;
-    const [count, setCount] = useState(data.num);
+    const [count, setCount] = useState(data.quality);
+
+    const data2 =  {
+        ...data,
+        quality: count
+    }
+    console.log(data2);
   return (
     <div className="product-items">
-      <img src="/src/assets/img/bg-2.png" alt="" />
+      <img src={data.img} alt="" />
       <div className="name">{data.name}</div>
       <div className="pice">{data.pice}</div>
       <div className="num">

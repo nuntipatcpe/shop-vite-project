@@ -1,10 +1,14 @@
 import React from "react";
 import { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+
+import {useSelector} from 'react-redux'
 
 function navbar() {
+  const cart = useSelector((state)=>state.cart);
+  const quality = cart.reduce((sum,item) =>sum + item.quality ,0 )
   const [productHendle, setProductHendle] = useState(false);
-  console.log(productHendle);
+
   return (
     <div className="nav-bar">
       <div className="container">
@@ -45,7 +49,7 @@ function navbar() {
           </div>
           
           <div className="item">
-          <Link  to ='/cart' className="link-menu">cart 0</Link>
+          <Link  to ='/cart' className="link-menu">cart {quality}</Link>
           </div>
         </ul>
       </div>
