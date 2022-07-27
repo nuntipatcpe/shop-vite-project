@@ -22,6 +22,9 @@ function ListProduct(props) {
     setCount(count + x);
     if(x<=0){
       dispatch(increase(dec));
+      if(count===1){
+        dispatch(deleteCart(data.id));
+      }
     }else{
       dispatch(increase(inc));
     }
