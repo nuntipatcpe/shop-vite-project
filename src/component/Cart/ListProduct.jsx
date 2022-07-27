@@ -1,14 +1,16 @@
 import React,{useState} from "react";
 
+import DeleteBtn from "../Button/DeleteBtn";
+
 function ListProduct(props) {
     const data = props.data;
     const [count, setCount] = useState(data.quality);
 
-    const data2 =  {
-        ...data,
-        quality: count
-    }
-    console.log(data2);
+    // const data2 =  {
+    //     ...data,
+    //     quality: count
+    // }
+    // console.log(data2);
   return (
     <div className="product-items">
       <img src={data.img} alt="" />
@@ -33,7 +35,7 @@ function ListProduct(props) {
           +
         </button>
       </div>
-      <button className="delete-btn">Delete</button>
+     <DeleteBtn id ={data.id}/>
     </div>
   );
 }

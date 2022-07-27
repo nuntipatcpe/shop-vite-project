@@ -9,14 +9,14 @@ const cartSlice = createSlice({
     initialState,
     reducers:{
         addToCart:(state,action)=>{
-        const foundItem = state.find((item)=>item.img===action.payload.img);
+        const foundItem = state.find((item)=>item.id===action.payload.id);
            if(!foundItem){
             state.push(action.payload);
            }else{
                return state.map((item)=>(
                     {
                         ...item,
-                        quality:  item.img === foundItem.img
+                        quality:  item.id === foundItem.id
                         ? item.quality + action.payload.quality
                         : item.quality,
                     }
@@ -24,20 +24,10 @@ const cartSlice = createSlice({
            }
         },
         deleteCart:(state,action)=>{
-            console.log('delete');
-            console.log(state);
+            console.log(action.payload);
+            return state.filter((items)=>items.id!==parseInt(action.payload));
         },
-        increaseCart: ()=>{
-            return state.map((item)=>(
-                {
-                    ...item,
-                    quality:  item.img === foundItem.img
-                    ? item.quality + 1
-                    : item.quality,
-                }
-            ))
-        }
-        
+ 
     }
 })
 

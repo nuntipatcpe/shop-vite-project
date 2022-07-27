@@ -1,11 +1,10 @@
 import React from "react";
 import ListProduct from "../component/Cart/ListProduct";
-import {useSelector} from 'react-redux'
+import { useSelector } from "react-redux";
 function Cart() {
-
-    const item = useSelector((state)=> state.cart);
-    // const a = item.map((i)=> i)
-    // console.log(a);
+  const item = useSelector((state) => state.cart);
+  // const a = item.map((i)=> i)
+  // console.log(a);
 
   const data = item;
 
@@ -16,16 +15,10 @@ function Cart() {
           <h1>My Cart</h1>
           {/* _______________ */}
           {data.map((item) => {
-            return (
-      
-                  <ListProduct data={item}/>
-     
-            );
+            return <ListProduct data={item} />;
           })}
-
         </div>
         <div className="summary">
-
           <h1>Product summary</h1>
           <div className="card-summary">
             <div className="item">
@@ -47,7 +40,6 @@ function Cart() {
           <div className="btn">
             <button>Play</button>
           </div>
-
         </div>
       </div>
     </div>
