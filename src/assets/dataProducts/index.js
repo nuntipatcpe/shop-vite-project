@@ -6,15 +6,12 @@ import img5 from '../img/bg-5.jpg';
 import img6 from '../img/bg-6.jpg';
 import img7 from '../img/bg-7.jpg';
 
-import { v4 as uuidv4 } from 'uuid';
-
 export const product= ()=>{
-
   const data = [
     {
       id: 1,
       img : img1,
-      name: "Cannabis sativaTop1",
+      name: "Cannabis sativa Top 1",
       pice: 200,
       quality: 1,
       popular:100,
@@ -30,7 +27,7 @@ export const product= ()=>{
     {
       id: 2,
       img : img2,
-      name: "Cannabis sativaTop3",
+      name: "Cannabis sativa Top 3",
       pice: 400,
       quality: 1,
       popular:70,
@@ -44,7 +41,7 @@ export const product= ()=>{
     {
       id: 3,
       img : img3,
-      name: "Cannabis sativaT0p2",
+      name: "Cannabis sativa Top 2",
       pice: 800,
       quality: 1,
       popular:90,
@@ -115,6 +112,5 @@ export const product= ()=>{
       picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3]
     }
   ];
-
     return data
 }

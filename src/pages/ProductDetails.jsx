@@ -14,12 +14,11 @@ function ProductDetails() {
   const {id} = useParams();
 
   const quality = useSelector((state)=>state.cart).filter((item)=>item.id===parseInt(id));
-
   const data = product().filter((item)=>item.id===parseInt(id));
-  
   // const [count, setCount] = useState(quality.length=== 0 ?  data[0].quality : quality[0].quality);
   const [count, setCount] = useState(1);
 
+  
   // data[0].quality
   return (
     <div className="product-details">
@@ -33,7 +32,6 @@ function ProductDetails() {
           <div className="detail">
             <div className="name">{data[0].name}</div>
             <div className="pice">{data[0].pice}</div>
-
             <div className="num">
               <button
                 className="increase"

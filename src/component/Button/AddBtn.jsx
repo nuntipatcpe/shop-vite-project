@@ -5,7 +5,7 @@ import {addToCart}from '../../slices/cartSlice'
 
 function AddBtnComponent(props) {
 
-  console.log(parseInt(props.num));
+  // console.log(parseInt(props.num));
   
     const dispatch = useDispatch();
     const addData ={

@@ -22,8 +22,6 @@ function Home() {
           </div>
         </div>
         <div className="top">
-
-          
           <h1>Top3</h1>
           <div className="card-con">    
             <h1>1st</h1>

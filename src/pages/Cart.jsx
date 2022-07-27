@@ -16,7 +16,6 @@ function Cart() {
       <div className="container">
         <div className="cart-items">
           <h1>My Cart</h1>
-          {/* _______________ */}
           {data.map((item) => {
             return (
               <div key={item.id}><ListProduct data={item} /></div>
