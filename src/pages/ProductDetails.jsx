@@ -1,20 +1,35 @@
 import React, { useState } from "react";
 // import {useState} from 'react'
+import{useParams}from 'react-router-dom';
+
+import {product} from '../assets/dataProducts/index';
+import {useSelector} from 'react-redux'
+import { v4 as uuidv4 } from 'uuid';
 
 function ProductDetails() {
-  const [count, setCount] = useState(0);
+
+  const {id} = useParams();
+
+  const quality = useSelector((state)=>state.cart).filter((item)=>item.id===parseInt(id));
+
+  console.log(quality);
+  
+  const data = product().filter((item)=>item.id===parseInt(id));
+  const [count, setCount] = useState(quality.length=== 0 ?  data[0].quality : quality[0].quality);
+
+  // data[0].quality
   return (
     <div className="product-details">
       <div className="container">
         <h1 className="title">Product details</h1>
         <div className="detail-con">
           <div className="img">
-            <img src="/src/assets/img/bg-1.png" alt="" />
+            <img src={data[0].img} alt="" />
           </div>
 
           <div className="detail">
-            <div className="name">Cannabis sativa</div>
-            <div className="pice">$500</div>
+            <div className="name">{data[0].name}</div>
+            <div className="pice">{data[0].pice}</div>
 
             <div className="num">
               <button
@@ -42,50 +57,13 @@ function ProductDetails() {
             </div>
             <div className="description">
               <h1>Product details</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, veritatis.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, veritatis.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, veritatis.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, veritatis.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, veritatis.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, veritatis.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, veritatis.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, veritatis.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, veritatis.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, veritatis.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quibusdam, veritatis.
-              </p>
+
+              {data[0].detail.map((item)=>{
+                return (
+                  <p key={uuidv4()}>{item}</p>
+                );
+              })}
+              
             </div>
           </div>
         </div>
@@ -93,22 +71,15 @@ function ProductDetails() {
         <div className="gird-container-img">
           <h1>Picture</h1>
           <div className="grid">
-            <img src="/src/assets/img/bg-1.png" alt="" />
-            <img src="/src/assets/img/bg-2.png" alt="" />
-            <img src="/src/assets/img/bg-1.png" alt="" />
-            <img src="/src/assets/img/bg-2.png" alt="" />
-            <img src="/src/assets/img/bg-1.png" alt="" />
-            <img src="/src/assets/img/bg-2.png" alt="" />
-            <img src="/src/assets/img/bg-1.png" alt="" />
-            <img src="/src/assets/img/bg-1.png" alt="" />
-            <img src="/src/assets/img/bg-1.png" alt="" />
-            <img src="/src/assets/img/bg-1.png" alt="" />
-            <img src="/src/assets/img/bg-2.png" alt="" />
-            <img src="/src/assets/img/bg-2.png" alt="" />
-            <img src="/src/assets/img/bg-2.png" alt="" />
-            <img src="/src/assets/img/bg-2.png" alt="" />
-            <img src="/src/assets/img/bg-2.png" alt="" />
-            <img src="/src/assets/img/bg-2.png" alt="" />
+            
+          {data[0].picture.map((item)=>{
+                return (
+                  <div key={uuidv4()}>
+
+                    <img src={item} alt="" />
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>

@@ -16,21 +16,12 @@ function Products(props) {
         <div className="grid-container">
           {productProp.map((item)=>{
             return (
-              <CardComponent top={item} />
+              <div key={item.id}>
+                <CardComponent top={item} />
+              </div>             
             )
           })}
           
-          {/* <CardComponent top={productProp} />
-          <CardComponent top={productProp} />
-          <CardComponent top={productProp} />
-          <CardComponent top={productProp} />
-          <CardComponent top={productProp} />
-          <CardComponent top={productProp} />
-          <CardComponent top={productProp} />
-          <CardComponent top={productProp} />
-          <CardComponent top={productProp} />
-      */}
-         
         </div>
       </div>
     </div>

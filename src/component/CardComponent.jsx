@@ -11,9 +11,7 @@ function CardComponent(props) {
   const dispatch = useDispatch();
   return (
       <div className="card">
-        <Link to='/details'className="img">
-         
-        </Link>
+        <Link to={`/details${props.top.id}`} className="img"></Link>
         <img src={props.top.img} alt="img"/> 
         <div className="topic">{props.top.name}</div>
         <div className="pice">

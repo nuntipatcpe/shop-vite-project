@@ -9,9 +9,7 @@ const cartSlice = createSlice({
     initialState,
     reducers:{
         addToCart:(state,action)=>{
-            const foundItem = state.find((item)=>item.img===action.payload.img);
-            // console.log(a);
-
+        const foundItem = state.find((item)=>item.img===action.payload.img);
            if(!foundItem){
             state.push(action.payload);
            }else{
@@ -24,12 +22,20 @@ const cartSlice = createSlice({
                     }
                 ))
            }
-
-            
         },
         deleteCart:(state,action)=>{
             console.log('delete');
             console.log(state);
+        },
+        increaseCart: ()=>{
+            return state.map((item)=>(
+                {
+                    ...item,
+                    quality:  item.img === foundItem.img
+                    ? item.quality + 1
+                    : item.quality,
+                }
+            ))
         }
         
     }

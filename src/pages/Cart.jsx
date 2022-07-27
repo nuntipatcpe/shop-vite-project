@@ -17,7 +17,9 @@ function Cart() {
           {/* _______________ */}
           {data.map((item) => {
             return (
-                <ListProduct data={item}/>
+      
+                  <ListProduct data={item}/>
+     
             );
           })}
 

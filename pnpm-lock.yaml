@@ -10,6 +10,7 @@ specifiers:
   react-redux: ^8.0.2
   react-router-dom: ^6.3.0
   sass: ^1.54.0
+  uuid: ^8.3.2
   vite: ^3.0.0
 
 dependencies:
@@ -18,6 +19,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
   react-redux: 8.0.2_v7vsrdtui4d36prbwvdnlb7tpq
   react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
+  uuid: 8.3.2
 
 devDependencies:
   '@types/react': 18.0.15
@@ -1092,6 +1094,11 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /uuid/8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
     dev: false
 
   /vite/3.0.2_sass@1.54.0:
