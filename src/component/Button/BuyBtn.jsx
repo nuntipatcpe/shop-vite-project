@@ -2,7 +2,7 @@ import React from 'react'
 
 function BuyBtnComponent() {
   return (
-    <div>BuyBtnComponent</div>
+    <button className="buy">Buy</button>
   )
 }
 

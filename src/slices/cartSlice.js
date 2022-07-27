@@ -17,7 +17,7 @@ const cartSlice = createSlice({
                     {
                         ...item,
                         quality:  item.img === foundItem.img
-                        ? item.quality + 1
+                        ? item.quality + action.payload.quality
                         : item.quality,
                     }
                 ))
