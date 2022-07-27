@@ -24,7 +24,6 @@ const cartSlice = createSlice({
            }
         },
         deleteCart:(state,action)=>{
-            console.log(action.payload);
             return state.filter((items)=>items.id!==parseInt(action.payload));
         },
  

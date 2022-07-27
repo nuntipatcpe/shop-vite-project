@@ -15,7 +15,7 @@ export const product= ()=>{
       id: 1,
       img : img1,
       name: "Cannabis sativaTop1",
-      pice: "$200",
+      pice: 200,
       quality: 1,
       popular:100,
       detail: [
@@ -31,7 +31,7 @@ export const product= ()=>{
       id: 2,
       img : img2,
       name: "Cannabis sativaTop3",
-      pice: "$400",
+      pice: 400,
       quality: 1,
       popular:70,
       detail: [
@@ -45,7 +45,7 @@ export const product= ()=>{
       id: 3,
       img : img3,
       name: "Cannabis sativaT0p2",
-      pice: "$800",
+      pice: 800,
       quality: 1,
       popular:90,
       detail: [
@@ -60,7 +60,7 @@ export const product= ()=>{
       id: 4,
       img : img4,
       name: "Cannabis sativa3",
-      pice: "$800",
+      pice: 800,
       quality: 1,
       popular:10,
       detail: [
@@ -74,7 +74,7 @@ export const product= ()=>{
       id: 5,
       img : img5,
       name: "Cannabis sativa3",
-      pice: "$800",
+      pice: 800,
       quality: 1,
       popular:10,
       detail: [
@@ -89,7 +89,7 @@ export const product= ()=>{
       id: 6,
       img : img6,
       name: "Cannabis sativa3",
-      pice: "$800",
+      pice: 800,
       quality: 1,
       popular:10,
       detail: [
@@ -104,7 +104,7 @@ export const product= ()=>{
       id: 7,
       img : img7,
       name: "Cannabis sativa3",
-      pice: "$800",
+      pice: 800,
       quality: 1,
       popular:10,
       detail: [

@@ -1,12 +1,15 @@
 import React from "react";
 import ListProduct from "../component/Cart/ListProduct";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 function Cart() {
   const item = useSelector((state) => state.cart);
-  // const a = item.map((i)=> i)
-  // console.log(a);
-
   const data = item;
+    
+  let allPice = data.reduce((pre,currentValue)=>pre+(currentValue.pice*currentValue.quality),0);
+  let tax = ((7/100)*allPice);
+  let sum = allPice-tax;
+
 
   return (
     <div className="cart">
@@ -15,25 +18,27 @@ function Cart() {
           <h1>My Cart</h1>
           {/* _______________ */}
           {data.map((item) => {
-            return <ListProduct data={item} />;
+            return (
+              <div key={item.id}><ListProduct data={item} /></div>
+            )
           })}
         </div>
         <div className="summary">
           <h1>Product summary</h1>
           <div className="card-summary">
             <div className="item">
-              <h2>Product pice</h2>
-              <p>100</p>
+              <h2>All price</h2>
+              <p>{allPice}</p>
               <p>USD</p>
             </div>
             <div className="item">
-              <h2>PTax 7%</h2>
-              <p>7</p>
+              <h2>Tax 7%</h2>
+              <p>{tax.toFixed(2)}</p>
               <p>USD</p>
             </div>
             <div className="item">
-              <h2>Shipping cost</h2>
-              <p>100</p>
+              <h2>Cost</h2>
+              <p>{sum.toFixed(2)}</p>
               <p>USD</p>
             </div>
           </div>

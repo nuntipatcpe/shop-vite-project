@@ -6,6 +6,8 @@ function ListProduct(props) {
     const data = props.data;
     const [count, setCount] = useState(data.quality);
 
+
+
     // const data2 =  {
     //     ...data,
     //     quality: count
@@ -15,7 +17,7 @@ function ListProduct(props) {
     <div className="product-items">
       <img src={data.img} alt="" />
       <div className="name">{data.name}</div>
-      <div className="pice">{data.pice}</div>
+      <div className="pice">{data.pice*data.quality}</div>
       <div className="num">
         <button
           className="increase"
