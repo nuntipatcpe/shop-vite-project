@@ -34,7 +34,6 @@ function Home() {
             <CardComponent top = {data[2]}/>
           </div>
 
-
         </div>
       </div>
     </div>

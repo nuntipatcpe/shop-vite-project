@@ -6,6 +6,8 @@ import {product} from '../assets/dataProducts/index';
 import {useSelector} from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 
+import AddBtnComponent from "../component/Button/AddBtnComponent";
+
 function ProductDetails() {
 
   const {id} = useParams();
@@ -52,7 +54,8 @@ function ProductDetails() {
             </div>
             
             <div className="btn">
-              <button className="add-cart">Add to cart</button>
+              {/* <button className="add-cart">Add to cart</button> */}
+              <AddBtnComponent data={data[0]}/>
               <button className="buy">Buy</button>
             </div>
             <div className="description">

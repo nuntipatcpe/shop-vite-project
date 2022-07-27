@@ -4,6 +4,7 @@ import{Link}from 'react-router-dom'
 import{useDispatch} from 'react-redux'
 import {addToCart}from '../slices/cartSlice'
 
+import AddBtnComponent from "./Button/AddBtnComponent";
 
 function CardComponent(props) {
 
@@ -19,7 +20,8 @@ function CardComponent(props) {
           </div> 
         
          <div className="btn">
-          <button className="add-cart" onClick={()=>dispatch(addToCart(props.top))}>Add to cart</button>
+          {/* <button className="add-cart" onClick={()=>dispatch(addToCart(props.top))}>Add to cart</button> */}
+          <AddBtnComponent data ={props.top}/>
           <button className="buy">Buy</button>
         </div>
       </div>
