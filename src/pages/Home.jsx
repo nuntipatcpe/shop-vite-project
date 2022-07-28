@@ -1,7 +1,7 @@
 import React from "react";
 
 
-import {product} from '../assets/dataProducts/index'
+import {product} from '../assets/ListProducts/index'
 
 
 import CardComponent from "../component/CardComponent";

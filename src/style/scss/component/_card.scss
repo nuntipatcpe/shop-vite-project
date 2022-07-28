@@ -9,7 +9,9 @@
   justify-content: space-between;
   padding: 1rem;
   position: relative;
+  transition: .2s ease;
   &:hover {
+    transition: .2s ease;
     transform: scale(1.05);
   }
   .ling {

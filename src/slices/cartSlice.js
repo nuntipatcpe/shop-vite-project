@@ -24,11 +24,11 @@ const cartSlice = createSlice({
       return state.filter((items) => items.id !== parseInt(action.payload));
     },
     increase:(state,action)=>{
-      const foundItem = state.find((item) => item.id === action.payload.id);
+      const foundItem = state.find((item) => item.id === action.payload[0]);
       if(foundItem){
         return state.map((item)=>({
           ...item,
-          quality:action.payload.quality
+          quality:action.payload[1]
         }));
       }
     }

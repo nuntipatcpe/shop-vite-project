@@ -8,33 +8,26 @@ function ListProduct(props) {
   const dispatch = useDispatch();
   const data = props.data;
   const [count, setCount] = useState(data.quality);
-
-  const inc = {
-    ...data,
-    quality:count+1
-  };
-  const dec = {
-    ...data,
-    quality:count-1
-  };
-
+ 
   const setItem = (x) => {
+    let dataInc =[data.id,count+x];
     setCount(count + x);
     if(x<=0){
-      dispatch(increase(dec));
+      dispatch(increase(dataInc));
       if(count===1){
         dispatch(deleteCart(data.id));
       }
     }else{
-      dispatch(increase(inc));
+      dispatch(increase(dataInc));
     }
   };
   
   return (
     <div className="product-items">
+      <div className="img"></div>
       <img src={data.img} alt="" />
       <div className="name">{data.name}</div>
-      <div className="pice">{data.pice * count}</div>
+      <div className="pice">{data.pice * count}$</div>
       <div className="num">
         <button
           className="decrease"

@@ -10,7 +10,21 @@ import Cart from './pages/Cart'
 import { BrowserRouter as Router, Routes , Route} from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState()
+  const [aut, setAut] = useState(true)
+
+// if(aut){
+//   return (
+//     <Router>
+//         <Navbar/>
+//         <Routes>
+//           <Route path='/' element={<Home/>} />
+//           <Route path='/details:id' element={<ProductDetails/>} />
+//         </Routes>
+//       </Router>
+//   )
+
+// }
+
   return (
     <div className="App">
 

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import CardComponent from "../component/CardComponent";
 
-import {product} from '../assets/dataProducts/index'
+import {product} from '../assets/ListProducts/index'
 
 function Products(props) {
   const title = props.menu;

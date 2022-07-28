@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import {useState} from 'react'
 import{useParams}from 'react-router-dom';
 
-import {product} from '../assets/dataProducts/index';
+import {product} from '../assets/ListProducts/index';
 import {useSelector} from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 
