@@ -1,23 +1,24 @@
 import React from "react";
 import { useState } from "react";
-import CardComponent from "../component/CardComponent";
+import CardComponent from "./component/CardComponent";
 
-import {product} from '../assets/ListProducts/index'
+import {product} from '../../assets/ListProducts/index'
+import{useParams} from 'react-router-dom'
 
-function Products(props) {
-  const title = props.menu;
+function AllProducts() {
+  const {type} = useParams();
   const productProp = product();
-
+  
   return (
     <div className="product">
       <div className="container">
-        <h1 className="title">{title}</h1>
+        <h1 className="title">{type}</h1>
         <input type="text" className="serach" placeholder="Serach" />
         <div className="grid-container">
           {productProp.map((item)=>{
             return (
               <div key={item.id}>
-                <CardComponent top={item} />
+                <CardComponent products={item} />
               </div>             
             )
           })}
@@ -28,4 +29,4 @@ function Products(props) {
   );
 }
 
-export default Products;
+export default AllProducts;

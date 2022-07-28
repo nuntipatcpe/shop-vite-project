@@ -1,20 +1,23 @@
 import React from "react";
 import{Link}from 'react-router-dom'
-import AddBtn from "./Button/AddBtn";
+import AddBtn from "../../../component/Button/AddBtn";
 
 function CardComponent(props) {
+  const {id,name,img,pice}= props.products;
+  const objProduct = props.products;
+  
   return (
       <div className="card">
-        <Link to={`/details${props.top.id}`} className="ling"></Link>
+        <Link to={`/details${id}`} className="ling"></Link>
         <div className="con-img">
-        <img src={props.top.img} alt="img"/> 
+        <img src={img} alt="img"/> 
         </div>
-        <div className="topic">{props.top.name}</div>
+        <div className="topic">{name}</div>
         <div className="pice">
-          <p>${props.top.pice}</p>
+          <p>${pice}</p>
           </div> 
          <div className="btn">
-          <AddBtn data ={props.top} num={0}/>
+          <AddBtn data ={objProduct} num={0}/>
           <button className="buy">Buy</button>
         </div>
       </div>

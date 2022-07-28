@@ -6,7 +6,7 @@ import {useSelector} from 'react-redux'
 
 function navbar() {
   const cart = useSelector((state)=>state.cart);
-  const quality = cart.reduce((sum,item) =>sum + item.quality ,0 )
+
   const [productHendle, setProductHendle] = useState(false);
 
   return (
@@ -19,7 +19,7 @@ function navbar() {
         </div>
         <ul className="menu">
           <Link
-            to="/products"
+            to={`/products/${'All'}`}
             className="link-product"
             onMouseOver={() => setProductHendle(true)}
             onMouseOut={() => setProductHendle(false)}
@@ -33,8 +33,8 @@ function navbar() {
               onMouseOver={() => setProductHendle(true)}
               onMouseOut={() => setProductHendle(false)}
             >
-              <Link to="/products/seed" className="link">Seed</Link>
-              <Link to="/products/tools"  className="link">Planting tools</Link>
+              <Link to={`/products/Seed`} className="link">Seed</Link>
+              <Link to={`/products/Plantingtools`}  className="link">Planting tools</Link>
             </div>
           </li>
 

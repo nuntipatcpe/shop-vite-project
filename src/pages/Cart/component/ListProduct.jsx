@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-import DeleteBtn from "../Button/DeleteBtn";
-import { increase ,deleteCart } from "../../slices/cartSlice";
+import DeleteBtn from "../../../component/Button/DeleteBtn";
+import { increase ,deleteCart } from "../../../slices/cartSlice";
 import { useDispatch } from "react-redux";
 
 function ListProduct(props) {
   const dispatch = useDispatch();
   const data = props.data;
   const [count, setCount] = useState(data.quality);
- 
+
   const setItem = (x) => {
     let dataInc =[data.id,count+x];
     setCount(count + x);

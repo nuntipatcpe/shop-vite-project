@@ -1,16 +1,17 @@
 import React from "react";
-import ListProduct from "../component/Cart/ListProduct";
+import ListProduct from "./component/ListProduct";
 import { useSelector } from "react-redux";
-import { useState } from "react";
+
+
+
+//Custom hooks
+import useCalulatePice from "../../hooks/useCalulatePice";
+
 function Cart() {
   const item = useSelector((state) => state.cart);
   const data = item;
+  const {allPice,tax,sum}  = useCalulatePice(data);
     
-  let allPice = data.reduce((pre,currentValue)=>pre+(currentValue.pice*currentValue.quality),0);
-  let tax = ((7/100)*allPice);
-  let sum = allPice-tax;
-
-
   return (
     <div className="cart">
       <div className="container">
@@ -22,6 +23,7 @@ function Cart() {
             )
           })}
         </div>
+
         <div className="summary">
           <h1>Product summary</h1>
           <div className="card-summary">
@@ -45,6 +47,7 @@ function Cart() {
             <button>Play</button>
           </div>
         </div>
+
       </div>
     </div>
   );

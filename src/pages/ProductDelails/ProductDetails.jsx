@@ -2,24 +2,19 @@ import React, { useState } from "react";
 // import {useState} from 'react'
 import{useParams}from 'react-router-dom';
 
-import {product} from '../assets/ListProducts/index';
+import {product} from '../../assets/ListProducts/index';
 import {useSelector} from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 
-import AddBtn from "../component/Button/AddBtn";
-import BuyBtn from "../component/Button/BuyBtn";
+import AddBtn from "../../component/Button/AddBtn";
+import BuyBtn from "../../component/Button/BuyBtn";
 
 function ProductDetails() {
 
+
   const {id} = useParams();
-
-  const quality = useSelector((state)=>state.cart).filter((item)=>item.id===parseInt(id));
   const data = product().filter((item)=>item.id===parseInt(id));
-  // const [count, setCount] = useState(quality.length=== 0 ?  data[0].quality : quality[0].quality);
   const [count, setCount] = useState(1);
-
-  
-  // data[0].quality
   return (
     <div className="product-details">
       <div className="container">
