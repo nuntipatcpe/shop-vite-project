@@ -3,15 +3,12 @@ import React, { useState } from "react";
 import{useParams}from 'react-router-dom';
 
 import {product} from '../../assets/ListProducts/index';
-import {useSelector} from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 
 import AddBtn from "../../component/Button/AddBtn";
 import BuyBtn from "../../component/Button/BuyBtn";
 
 function ProductDetails() {
-
-
   const {id} = useParams();
   const data = product().filter((item)=>item.id===parseInt(id));
   const [count, setCount] = useState(1);

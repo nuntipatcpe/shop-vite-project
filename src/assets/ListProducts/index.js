@@ -5,6 +5,8 @@ import img4 from '../img/bg-4.jpg';
 import img5 from '../img/bg-5.jpg';
 import img6 from '../img/bg-6.jpg';
 import img7 from '../img/bg-7.jpg';
+import img8 from '../img/bg-8.jpg';
+import img9 from '../img/bg-9.jpg';
 
 export const product= ()=>{
   const data = [
@@ -22,7 +24,8 @@ export const product= ()=>{
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
       ],
-      picture:[img2,img1,img3,img3,img3,img3,img3,img3,img3,img3]
+      picture:[img2,img1,img3,img3,img3,img3,img3,img3,img3,img3],
+      type:"seed"
     },
     {
       id: 2,
@@ -36,7 +39,8 @@ export const product= ()=>{
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
       ],
-      picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3]
+      picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3],
+      type:"seed"
     },
     {
       id: 3,
@@ -50,7 +54,8 @@ export const product= ()=>{
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
       ],
-      picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3]
+      picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3],
+      type:"plantingtools"
 
     },
     {
@@ -65,7 +70,8 @@ export const product= ()=>{
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
       ],
-      picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3]
+      picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3],
+      type:"seed"
     },
     {
       id: 5,
@@ -79,7 +85,8 @@ export const product= ()=>{
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
       ],
-      picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3]
+      picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3],
+      type:"seed"
     }
     ,
     {
@@ -94,7 +101,8 @@ export const product= ()=>{
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
       ],
-      picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3]
+      picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3],
+      type:"seed"
     }
     ,
     {
@@ -109,7 +117,40 @@ export const product= ()=>{
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
       ],
-      picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3]
+      picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3],
+      type:"seed"
+    }
+    ,
+    {
+      id: 8,
+      img : img8,
+      name: "Cannabis sativa3",
+      pice: 800,
+      quality: 1,
+      popular:10,
+      detail: [
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
+      ],
+      picture:[img8,img8,img8,img8,img8],
+      type:"plantingtools"
+    }
+    ,
+    {
+      id: 9,
+      img : img9,
+      name: "Cannabis sativa3",
+      pice: 800,
+      quality: 1,
+      popular:10,
+      detail: [
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis.",
+      ],
+      picture:[img3,img3,img3,img3,img3,img3,img3,img3,img3,img3],
+      type:"plantingtools"
     }
   ];
     return data

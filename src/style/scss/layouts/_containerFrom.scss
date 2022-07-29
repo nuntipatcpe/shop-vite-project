@@ -1,0 +1,12 @@
+@use '../abstracts/' as abs;
+.container-form{
+    box-shadow: 1px 1px 5px 1px rgb(163, 163, 163);
+    padding: 3rem 2rem;
+    background: #FFFFFF;
+    width: 30rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    color: abs.$color-base-3;
+
+}

@@ -1,6 +1,6 @@
-@use '../abstracts' as abs;
+@use '../../abstracts/' as abs;
 
-.product{
+.all-product{
     .container{
         flex-direction: column;
     }

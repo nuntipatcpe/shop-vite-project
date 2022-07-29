@@ -1,15 +1,25 @@
 @use './bsae/reset';
 
-
+//layouts
 @use './layouts/container';
 @use './layouts/navba';
+@use './layouts/containerFrom';
 
-//pages
-@use './pages/home';
-@use './pages/products';
-@use './pages/product_detail';
-@use './pages/cart';
-@use './pages/_topCard';
+//Home page
+@use './pages/Home/home';
+@use './pages/Home/component/topCard';
 
-@use './component/card';
-@use './component/listProduct';
+//Product page
+@use './pages/AllProduct/Allproducts';
+@use './pages/AllProduct/component/card';
+
+//ProductDetail page
+@use './pages/ProductDetail/product_detail';
+
+//Cart page
+@use './pages/Cart/cart';
+@use './pages/Cart/component/listProduct';
+
+//Login page
+@use './pages/Login/login';
+

@@ -19,7 +19,7 @@ function navbar() {
         </div>
         <ul className="menu">
           <Link
-            to={`/products/${'All'}`}
+            to={`/allProducts/${'All'}`}
             className="link-product"
             onMouseOver={() => setProductHendle(true)}
             onMouseOut={() => setProductHendle(false)}
@@ -33,8 +33,8 @@ function navbar() {
               onMouseOver={() => setProductHendle(true)}
               onMouseOut={() => setProductHendle(false)}
             >
-              <Link to={`/products/Seed`} className="link">Seed</Link>
-              <Link to={`/products/Plantingtools`}  className="link">Planting tools</Link>
+              <Link to={`/allProducts/Seed`} className="link">Seed</Link>
+              <Link to={`/allProducts/Plantingtools`}  className="link">Planting tools</Link>
             </div>
           </li>
 

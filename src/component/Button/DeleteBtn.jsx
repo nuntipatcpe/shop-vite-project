@@ -1,7 +1,7 @@
 import React from 'react'
 import{useDispatch}from 'react-redux'
 
-import {deleteCart}from '../../slices/cartSlice'
+import {deleteCart}from '../../store/slices/cartSlice'
 
 function DeleteBtn(props) {
     // console.log(props.id);

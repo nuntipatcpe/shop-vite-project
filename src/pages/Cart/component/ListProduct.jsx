@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import DeleteBtn from "../../../component/Button/DeleteBtn";
-import { increase ,deleteCart } from "../../../slices/cartSlice";
+import { increase ,deleteCart } from "../../../store/slices/cartSlice";
 import { useDispatch } from "react-redux";
 
 function ListProduct(props) {
