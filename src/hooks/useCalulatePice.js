@@ -5,6 +5,7 @@ const useCalulatePice=(data) =>{
     let tax = ((7/100)*allPice);
     let sum = allPice-tax;
     return {allPice,tax,sum};
+
 }
 
 export default useCalulatePice
